@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us - Nova AI Solutions</title>
+  <meta name="description" content="Learn about Nova AI Solutions - Leading provider of AI, IoT, and Solar solutions for enterprise businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link id="all-fonts-link-font-geist" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap">
+  <style id="all-fonts-style-font-geist">
+    .font-geist {
+      font-family: 'Geist', sans-serif !important;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#0a0a12] text-white font-geist">
+  <!-- Background Elements -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full blur-3xl opacity-30 bg-[radial-gradient(closest-side,rgba(99,102,241,0.45),rgba(18,18,27,0))]">
+    </div>
+    <div class="absolute bottom-0 right-0 w-[700px] h-[700px] translate-x-1/3 translate-y-1/3 rounded-full blur-3xl opacity-30 bg-[radial-gradient(closest-side,rgba(99,102,241,0.45),rgba(18,18,27,0))]">
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header class="relative z-50 sticky top-0 backdrop-blur-xl bg-[#0a0a12]/80 border-b border-white/5">
+    <div class="max-w-7xl sm:px-6 lg:px-8 border-slate-50/5 mr-auto ml-auto pr-4 pl-4">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="./Assets/Logo-white.png" alt="Nova" class="h-5 w-auto">
+        </a>
+
+        <nav class="hidden md:flex gap-1 border-slate-50/5 border rounded-full px-4 items-center">
+          <!-- Products Dropdown -->
+          <div class="relative group">
+            <button
+              class="hover:text-white text-sm font-medium text-zinc-300 pt-2 pr-3 pb-2 pl-3 flex items-center gap-1">
+              Products
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div
+              class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-[#0a0a12]/95 backdrop-blur-xl border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div class="py-2">
+                <a href="solar.html"
+                  class="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 transition-colors">
+                  Solar Products
+                </a>
+                <a href="about-us.html#ai-solutions"
+                  class="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 transition-colors">
+                  AI Solutions
+                </a>
+                <a href="about-us.html#iot-solutions"
+                  class="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 transition-colors">
+                  IoT Solutions
+                </a>
+
+              </div>
+            </div>
+          </div>
+          <a href="about-us.html" class="px-3 py-2 text-sm font-medium text-white bg-white/10 rounded-lg">About Us</a>
+          <a href="blogs.html" class="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white">Blogs</a>
+          <a href="about-us.html#contact" class="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white">Contact Us</a>
+        </nav>
+
+        <div class="flex gap-2 items-center">
+           <button type="button" role="button" aria-label="Book a Demo"
+             class="group relative inline-flex shadow-[0_8px_16px_-4px_rgba(151,65,252,0.2)] hover:shadow-[0_12px_20px_-6px_rgba(151,65,252,0.28)] transition duration-300 ease-out select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 transform-gpu hover:-translate-y-0.5 text-white rounded-md pt-[1px] pr-[1px] pb-[1px] pl-[1px] items-center justify-center"
+             style="background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%, #00DDEB);">
+             <span
+               class="flex items-center justify-center gap-2 text-[14px] leading-none min-w-[100px] w-full h-full transition-colors duration-300 group-hover:bg-transparent font-medium bg-[#0b0f17] rounded-md pt-2 pr-4 pb-2 pl-4">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 data-lucide="calendar" class="lucide lucide-calendar h-4 w-4" aria-hidden="true">
+                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                 <line x1="16" y1="2" x2="16" y2="6"></line>
+                 <line x1="8" y1="2" x2="8" y2="6"></line>
+                 <line x1="3" y1="10" x2="21" y2="10"></line>
+               </svg>
+               <span class="">Book a Demo</span>
+             </span>
+           </button>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative z-10 pt-20 pb-32">
+    <div class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pt-16 pr-4 pb-16 pl-4">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+          About <span class="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-indigo-600">Nova AI</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          Pioneering the future of enterprise AI solutions, IoT innovations, and sustainable solar technology.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="relative z-10 py-20">
+    <div class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pr-4 pl-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl font-bold text-white mb-6">Our Story</h2>
+          <p class="text-lg text-gray-300 mb-6">
+            Founded in 2020, Nova AI Solutions emerged from a vision to bridge the gap between cutting-edge technology and practical business solutions. We recognized that enterprises needed more than just AI tools—they needed comprehensive ecosystems that could transform their operations.
+          </p>
+          <p class="text-lg text-gray-300 mb-6">
+            Today, we're proud to be at the forefront of AI innovation, IoT integration, and sustainable solar solutions, helping businesses across industries achieve unprecedented growth and efficiency.
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-violet-400">500+</div>
+              <div class="text-sm text-gray-400">Projects Completed</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-violet-400">50+</div>
+              <div class="text-sm text-gray-400">Enterprise Clients</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-violet-400">99%</div>
+              <div class="text-sm text-gray-400">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-square bg-gradient-to-br from-violet-500/20 to-indigo-500/20 rounded-3xl p-8 backdrop-blur-xl border border-white/10">
+            <div class="h-full flex items-center justify-center">
+              <div class="text-center">
+                <div class="w-24 h-24 mx-auto mb-4 bg-violet-500/20 rounded-full flex items-center justify-center">
+                  <svg class="w-12 h-12 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">Innovation First</h3>
+                <p class="text-gray-300">Driving the future of technology</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision Section -->
+  <section class="relative z-10 py-20 bg-gradient-to-b from-transparent to-[#0A0A11]">
+    <div class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pr-4 pl-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="ring-1 ring-white/10 bg-neutral-900/30 rounded-3xl backdrop-blur p-8">
+          <div class="w-16 h-16 bg-violet-500/20 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Our Mission</h3>
+          <p class="text-gray-300">
+            To democratize advanced AI technology and make it accessible to businesses of all sizes, while promoting sustainable practices through innovative solar and IoT solutions.
+          </p>
+        </div>
+        <div class="ring-1 ring-white/10 bg-neutral-900/30 rounded-3xl backdrop-blur p-8">
+          <div class="w-16 h-16 bg-indigo-500/20 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Our Vision</h3>
+          <p class="text-gray-300">
+            To create a world where every business can leverage the power of AI, IoT, and sustainable energy to achieve unprecedented growth and make a positive impact on the planet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="relative z-10 py-20">
+    <div class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pr-4 pl-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
+        <p class="text-xl text-gray-300">The brilliant minds behind Nova AI Solutions</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-violet-500/20 to-indigo-500/20 rounded-full flex items-center justify-center">
+            <div class="w-24 h-24 bg-violet-500/30 rounded-full flex items-center justify-center">
+              <span class="text-2xl font-bold text-white">JS</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">John Smith</h3>
+          <p class="text-violet-400 mb-2">CEO & Founder</p>
+          <p class="text-gray-400 text-sm">AI researcher with 15+ years in enterprise technology</p>
+        </div>
+        <div class="text-center">
+          <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full flex items-center justify-center">
+            <div class="w-24 h-24 bg-indigo-500/30 rounded-full flex items-center justify-center">
+              <span class="text-2xl font-bold text-white">MJ</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Maria Johnson</h3>
+          <p class="text-indigo-400 mb-2">CTO</p>
+          <p class="text-gray-400 text-sm">IoT expert and full-stack developer</p>
+        </div>
+        <div class="text-center">
+          <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center">
+            <div class="w-24 h-24 bg-purple-500/30 rounded-full flex items-center justify-center">
+              <span class="text-2xl font-bold text-white">DK</span>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">David Kim</h3>
+          <p class="text-purple-400 mb-2">Head of Solar Solutions</p>
+          <p class="text-gray-400 text-sm">Renewable energy specialist and sustainability advocate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="relative z-10 py-20">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+      <p class="text-xl text-gray-300 mb-8">Join hundreds of companies already using our AI, IoT, and Solar solutions.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact-us.html" class="inline-flex items-center gap-2 shadow-violet-900/25 text-sm font-semibold text-white bg-gradient-to-br from-violet-500 to-indigo-600 rounded-full pt-2.5 pr-5 pb-2.5 pl-5 shadow-lg transform-gpu transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-6px_rgba(139,92,246,0.4)] hover:scale-[1.02] active:scale-[0.98] active:duration-75">
+          Get Started Today
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+        <a href="blogs.html" class="inline-flex items-center gap-2 hover:bg-white/5 text-sm font-medium text-zinc-200 border-white/10 border rounded-full pt-2.5 pr-5 pb-2.5 pl-5 backdrop-blur-lg">
+          Read Our Blog
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-white/10 bg-[#0a0a12]">
+    <div class="max-w-7xl mx-auto px-6 py-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="./Assets/Logo-white.png" alt="Nova" class="h-8 w-auto">
+          <span class="text-sm font-medium text-zinc-300">© 2025 Nova Labs. All rights reserved.</span>
+        </div>
+        <div class="flex items-center gap-6 text-sm text-zinc-400">
+          <a href="#" class="hover:text-zinc-200 transition-colors duration-200">Privacy Policy</a>
+          <a href="#" class="hover:text-zinc-200 transition-colors duration-200">Terms of Service</a>
+          <a href="contact-us.html" class="hover:text-zinc-200 transition-colors duration-200">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

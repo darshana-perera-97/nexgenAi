@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blogs - Nova AI Solutions</title>
+  <meta name="description" content="Stay updated with the latest insights on AI, IoT, Solar technology, and enterprise solutions from Nova AI Solutions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link id="all-fonts-link-font-geist" rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap">
+  <style id="all-fonts-style-font-geist">
+    .font-geist {
+      font-family: 'Geist', sans-serif !important;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-[#0a0a12] text-white font-geist">
+  <!-- Background Elements -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-40 -right-40 w-80 h-80 rounded-full blur-3xl opacity-30 bg-[radial-gradient(closest-side,rgba(99,102,241,0.45),rgba(18,18,27,0))]">
+    </div>
+    <div class="absolute bottom-0 right-0 w-[700px] h-[700px] translate-x-1/3 translate-y-1/3 rounded-full blur-3xl opacity-30 bg-[radial-gradient(closest-side,rgba(99,102,241,0.45),rgba(18,18,27,0))]">
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header class="relative z-50 sticky top-0 backdrop-blur-xl bg-[#0a0a12]/80 border-b border-white/5">
+    <div class="max-w-7xl sm:px-6 lg:px-8 border-slate-50/5 mr-auto ml-auto pr-4 pl-4">
+      <div class="flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="./Assets/Logo-white.png" alt="Nova" class="h-5 w-auto">
+        </a>
+
+        <nav class="hidden md:flex gap-1 border-slate-50/5 border rounded-full px-4 items-center">
+          <!-- Products Dropdown -->
+          <div class="relative group">
+            <button class="hover:text-white text-sm font-medium text-zinc-300 pt-2 pr-3 pb-2 pl-3 flex items-center gap-1">
+              Products
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-[#0a0a12]/95 backdrop-blur-xl border border-white/10 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div class="py-2">
+                <a href="#" class="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 transition-colors">
+                  Solar Products
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 transition-colors">
+                  AI Solutions
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/5 transition-colors">
+                  IoT Solutions
+                </a>
+              </div>
+            </div>
+          </div>
+          <a href="about-us.html" class="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white">About Us</a>
+          <a href="blogs.html" class="px-3 py-2 text-sm font-medium text-white bg-white/10 rounded-lg">Blogs</a>
+          <a href="contact-us.html" class="px-3 py-2 text-sm font-medium text-zinc-300 hover:text-white">Contact Us</a>
+        </nav>
+
+        <div class="flex gap-2 items-center">
+          <button type="button" role="button" aria-label="Book a Demo"
+            class="group relative inline-flex shadow-[0_8px_16px_-4px_rgba(151,65,252,0.2)] hover:shadow-[0_12px_20px_-6px_rgba(151,65,252,0.28)] transition duration-300 ease-out select-none cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/60 transform-gpu hover:-translate-y-0.5 text-white rounded-md pt-[1px] pr-[1px] pb-[1px] pl-[1px] items-center justify-center"
+            style="background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%, #00DDEB);">
+            <span class="flex items-center justify-center gap-2 text-[14px] leading-none min-w-[100px] w-full h-full transition-colors duration-300 group-hover:bg-transparent font-medium bg-[#0b0f17] rounded-md pt-2 pr-4 pb-2 pl-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" class="lucide lucide-calendar h-4 w-4" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Book a Demo
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative z-10 pt-20 pb-16">
+    <div class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pt-16 pr-4 pb-16 pl-4">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+          Our <span class="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-indigo-600">Blog</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          Insights, trends, and expert analysis on AI, IoT, Solar technology, and enterprise solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Filter -->
+  <section class="relative z-10 pb-8">
+    <div class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pr-4 pl-4">
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button class="px-6 py-2 bg-violet-500 text-white rounded-full text-sm font-medium">All Posts</button>
+        <button class="px-6 py-2 bg-white/10 text-zinc-300 hover:text-white rounded-full text-sm font-medium transition-colors">AI & Machine Learning</button>
+        <button class="px-6 py-2 bg-white/10 text-zinc-300 hover:text-white rounded-full text-sm font-medium transition-colors">IoT Solutions</button>
+        <button class="px-6 py-2 bg-white/10 text-zinc-300 hover:text-white rounded-full text-sm font-medium transition-colors">Solar Technology</button>
+        <button class="px-6 py-2 bg-white/10 text-zinc-300 hover:text-white rounded-full text-sm font-medium transition-colors">Enterprise</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section class="relative z-10 pb-16">
+    <div class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pr-4 pl-4">
+      <div class="ring-1 ring-white/10 bg-gradient-to-br from-violet-500/10 to-indigo-500/10 rounded-3xl backdrop-blur p-8 mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-violet-500/20 text-violet-300 rounded-full text-sm font-medium mb-4">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              Featured Post
+            </div>
+            <h2 class="text-3xl font-bold text-white mb-4">The Future of AI in Enterprise: 2025 Predictions</h2>
+            <p class="text-gray-300 mb-6">Discover how artificial intelligence is reshaping enterprise operations and what trends to watch in 2025. From automated decision-making to predictive analytics, explore the cutting-edge developments.</p>
+            <div class="flex items-center gap-4 text-sm text-gray-400 mb-6">
+              <span>By John Smith</span>
+              <span>•</span>
+              <span>Dec 15, 2024</span>
+              <span>•</span>
+              <span>8 min read</span>
+            </div>
+            <a href="#" class="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-medium">
+              Read Full Article
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="aspect-video bg-gradient-to-br from-violet-500/20 to-indigo-500/20 rounded-2xl flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-16 h-16 mx-auto mb-4 bg-violet-500/20 rounded-full flex items-center justify-center">
+                <svg class="w-8 h-8 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300">AI Innovation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="relative z-10 pb-20">
+    <div class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pr-4 pl-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Blog Post 1 -->
+        <article class="ring-1 ring-white/10 bg-neutral-900/30 rounded-2xl backdrop-blur overflow-hidden hover:ring-white/20 transition-all duration-300">
+          <div class="aspect-video bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-2 bg-blue-500/20 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300 text-sm">IoT Solutions</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-2 py-1 bg-blue-500/20 text-blue-300 rounded text-xs font-medium">IoT</span>
+              <span class="text-xs text-gray-400">Dec 12, 2024</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Smart Cities: How IoT is Transforming Urban Living</h3>
+            <p class="text-gray-400 text-sm mb-4">Explore how Internet of Things technology is creating smarter, more efficient cities and improving quality of life for residents.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">5 min read</span>
+              <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium">Read More →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article class="ring-1 ring-white/10 bg-neutral-900/30 rounded-2xl backdrop-blur overflow-hidden hover:ring-white/20 transition-all duration-300">
+          <div class="aspect-video bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-2 bg-green-500/20 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300 text-sm">Solar Technology</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-2 py-1 bg-green-500/20 text-green-300 rounded text-xs font-medium">Solar</span>
+              <span class="text-xs text-gray-400">Dec 10, 2024</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Solar Panel Efficiency: Latest Breakthroughs in 2024</h3>
+            <p class="text-gray-400 text-sm mb-4">Discover the latest advancements in solar panel technology and how they're making renewable energy more accessible and efficient.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">6 min read</span>
+              <a href="#" class="text-green-400 hover:text-green-300 text-sm font-medium">Read More →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 3 -->
+        <article class="ring-1 ring-white/10 bg-neutral-900/30 rounded-2xl backdrop-blur overflow-hidden hover:ring-white/20 transition-all duration-300">
+          <div class="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-2 bg-purple-500/20 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300 text-sm">Enterprise</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-2 py-1 bg-purple-500/20 text-purple-300 rounded text-xs font-medium">Enterprise</span>
+              <span class="text-xs text-gray-400">Dec 8, 2024</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Digital Transformation: A Complete Guide for Enterprises</h3>
+            <p class="text-gray-400 text-sm mb-4">Learn how to successfully navigate digital transformation in your organization with our comprehensive guide and best practices.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">10 min read</span>
+              <a href="#" class="text-purple-400 hover:text-purple-300 text-sm font-medium">Read More →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 4 -->
+        <article class="ring-1 ring-white/10 bg-neutral-900/30 rounded-2xl backdrop-blur overflow-hidden hover:ring-white/20 transition-all duration-300">
+          <div class="aspect-video bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-2 bg-orange-500/20 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300 text-sm">AI & ML</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-2 py-1 bg-orange-500/20 text-orange-300 rounded text-xs font-medium">AI</span>
+              <span class="text-xs text-gray-400">Dec 5, 2024</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Machine Learning in Healthcare: Saving Lives with AI</h3>
+            <p class="text-gray-400 text-sm mb-4">Explore how machine learning algorithms are revolutionizing healthcare and improving patient outcomes worldwide.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">7 min read</span>
+              <a href="#" class="text-orange-400 hover:text-orange-300 text-sm font-medium">Read More →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 5 -->
+        <article class="ring-1 ring-white/10 bg-neutral-900/30 rounded-2xl backdrop-blur overflow-hidden hover:ring-white/20 transition-all duration-300">
+          <div class="aspect-video bg-gradient-to-br from-teal-500/20 to-cyan-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-2 bg-teal-500/20 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300 text-sm">Sustainability</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-2 py-1 bg-teal-500/20 text-teal-300 rounded text-xs font-medium">Sustainability</span>
+              <span class="text-xs text-gray-400">Dec 3, 2024</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Green Technology: Building a Sustainable Future</h3>
+            <p class="text-gray-400 text-sm mb-4">How green technology solutions are helping businesses reduce their carbon footprint and contribute to environmental sustainability.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">5 min read</span>
+              <a href="#" class="text-teal-400 hover:text-teal-300 text-sm font-medium">Read More →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 6 -->
+        <article class="ring-1 ring-white/10 bg-neutral-900/30 rounded-2xl backdrop-blur overflow-hidden hover:ring-white/20 transition-all duration-300">
+          <div class="aspect-video bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
+            <div class="text-center">
+              <div class="w-12 h-12 mx-auto mb-2 bg-indigo-500/20 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+              </div>
+              <p class="text-gray-300 text-sm">Analytics</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="px-2 py-1 bg-indigo-500/20 text-indigo-300 rounded text-xs font-medium">Analytics</span>
+              <span class="text-xs text-gray-400">Dec 1, 2024</span>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-2">Data Analytics: Turning Information into Insights</h3>
+            <p class="text-gray-400 text-sm mb-4">Learn how advanced data analytics can transform raw information into actionable business insights and drive growth.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-500">9 min read</span>
+              <a href="#" class="text-indigo-400 hover:text-indigo-300 text-sm font-medium">Read More →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-12">
+        <button class="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium transition-colors duration-200">
+          Load More Posts
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="relative z-10 py-20 bg-gradient-to-b from-transparent to-[#0A0A11]">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+      <p class="text-lg text-gray-300 mb-8">Get the latest insights and updates delivered to your inbox.</p>
+      <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-500">
+        <button class="px-6 py-3 bg-gradient-to-r from-violet-500 to-indigo-600 text-white rounded-lg font-medium hover:from-violet-600 hover:to-indigo-700 transition-all duration-200">
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-white/10 bg-[#0a0a12]">
+    <div class="max-w-7xl mx-auto px-6 py-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <img src="./Assets/Logo-white.png" alt="Nova" class="h-8 w-auto">
+          <span class="text-sm font-medium text-zinc-300">© 2025 Nova Labs. All rights reserved.</span>
+        </div>
+        <div class="flex items-center gap-6 text-sm text-zinc-400">
+          <a href="#" class="hover:text-zinc-200 transition-colors duration-200">Privacy Policy</a>
+          <a href="#" class="hover:text-zinc-200 transition-colors duration-200">Terms of Service</a>
+          <a href="contact-us.html" class="hover:text-zinc-200 transition-colors duration-200">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

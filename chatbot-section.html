@@ -1,0 +1,173 @@
+          <!-- Chatbot Header -->
+          <div class="flex h-16 items-center justify-between border-b border-white/10 px-6">
+            <div class="flex items-center gap-3">
+              <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-5 h-5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <div>
+                <h1 class="text-lg font-semibold text-white">Nova AI Assistant</h1>
+                <p class="text-sm text-zinc-400">Ask me anything about AI, IoT, or Solar solutions</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+              <span class="text-xs text-zinc-400">Online</span>
+            </div>
+          </div>
+
+          <!-- Chat Messages -->
+          <div id="chatMessages" class="flex-1 p-6 space-y-4 max-h-96 overflow-y-auto">
+            <!-- Welcome message -->
+            <div class="flex items-start gap-3">
+              <div class="h-8 w-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <div class="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-3 max-w-xs">
+                <p class="text-sm text-white">Hello! I'm Nova AI Assistant. I can help you learn about our AI solutions, IoT integration services, and solar technology products. What would you like to know?</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input -->
+          <div class="border-t border-white/10 p-4">
+            <form id="chatForm" class="flex gap-3">
+              <input type="text" id="chatInput" placeholder="Ask about AI, IoT, or Solar solutions..."
+                class="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
+                autocomplete="off">
+              <button type="submit"
+                class="px-6 py-3 bg-gradient-to-r from-violet-500 to-indigo-600 text-white rounded-lg font-medium hover:from-violet-600 hover:to-indigo-700 transition-all duration-200 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4">
+                  <path d="M22 2L11 13"></path>
+                  <path d="M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+                Send
+              </button>
+            </form>
+          </div>
+
+          <!-- Chatbot JavaScript -->
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const chatForm = document.getElementById('chatForm');
+              const chatInput = document.getElementById('chatInput');
+              const chatMessages = document.getElementById('chatMessages');
+
+              function addMessage(content, isUser = false) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `flex items-start gap-3 ${isUser ? 'flex-row-reverse' : ''}`;
+                
+                if (isUser) {
+                  messageDiv.innerHTML = `
+                    <div class="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                      </svg>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl rounded-tr-sm px-4 py-3 max-w-xs">
+                      <p class="text-sm text-white">${content}</p>
+                    </div>
+                  `;
+                } else {
+                  messageDiv.innerHTML = `
+                    <div class="h-8 w-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                      </svg>
+                    </div>
+                    <div class="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-3 max-w-xs">
+                      <p class="text-sm text-white">${content}</p>
+                    </div>
+                  `;
+                }
+                
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }
+
+              function showTypingIndicator() {
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'flex items-start gap-3';
+                typingDiv.id = 'typing-indicator';
+                typingDiv.innerHTML = `
+                  <div class="h-8 w-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                      <path d="M2 17l10 5 10-5"></path>
+                      <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                  </div>
+                  <div class="bg-white/5 rounded-2xl rounded-tl-sm px-4 py-3">
+                    <div class="flex space-x-1">
+                      <div class="w-2 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
+                      <div class="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                      <div class="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                    </div>
+                  </div>
+                `;
+                chatMessages.appendChild(typingDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+              }
+
+              function removeTypingIndicator() {
+                const typingIndicator = document.getElementById('typing-indicator');
+                if (typingIndicator) {
+                  typingIndicator.remove();
+                }
+              }
+
+              chatForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const message = chatInput.value.trim();
+                if (!message) return;
+
+                // Add user message
+                addMessage(message, true);
+                chatInput.value = '';
+
+                // Show typing indicator
+                showTypingIndicator();
+
+                try {
+                  // Send message to backend
+                  const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: message })
+                  });
+
+                  const data = await response.json();
+                  
+                  // Remove typing indicator
+                  removeTypingIndicator();
+                  
+                  // Add bot response
+                  addMessage(data.response);
+                } catch (error) {
+                  // Remove typing indicator
+                  removeTypingIndicator();
+                  
+                  // Add error message
+                  addMessage('Sorry, I encountered an error. Please try again later.');
+                }
+              });
+            });
+          </script>

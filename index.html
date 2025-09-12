@@ -200,6 +200,34 @@
       font-family: 'Nunito', sans-serif !important;
     }
   </style>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Inline scrollbar styles to ensure they apply */
+    #chatMessages {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+    }
+    #chatMessages::-webkit-scrollbar {
+      width: 6px;
+    }
+    #chatMessages::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    #chatMessages::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+    #chatMessages::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    #chatMessages::-webkit-scrollbar-thumb:active {
+      background: rgba(255, 255, 255, 0.9);
+    }
+    #chatMessages::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  </style>
 </head>
 
 <body class="antialiased text-zinc-100 bg-[#0a0a12]"
@@ -363,7 +391,7 @@
           </div>
 
           <!-- Chat Messages -->
-          <div id="chatMessages" class="flex-1 p-6 space-y-4 max-h-96 overflow-y-auto">
+          <div id="chatMessages" class="flex-1 p-6 space-y-4 max-h-96 overflow-y-auto scrollbar-custom">
             <!-- Welcome message -->
             <div class="flex items-start gap-3">
               <div
@@ -487,7 +515,7 @@
 
                 try {
                   // Send message to backend
-                  const response = await fetch('/api/chat', {
+                  const response = await fetch('http://localhost:5001/api/chat', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',

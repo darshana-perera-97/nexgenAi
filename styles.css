@@ -172,3 +172,57 @@ body {
 .dropdown-menu {
   z-index: 9999;
 }
+
+/* Custom Chatbot Scrollbar Styles - Dark Only */
+#chatMessages {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+}
+
+/* Webkit scrollbar styles for Chrome, Safari, Edge */
+#chatMessages::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Remove scrollbar track completely */
+#chatMessages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Dark scrollbar thumb only */
+#chatMessages::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+#chatMessages::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#chatMessages::-webkit-scrollbar-thumb:active {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Remove scrollbar corner */
+#chatMessages::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Smooth scrolling behavior */
+#chatMessages {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for Firefox - dark only */
+@-moz-document url-prefix() {
+  #chatMessages {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+  }
+}
+
+/* Additional scrollbar utility class */
+.scrollbar-custom {
+  scrollbar-gutter: stable;
+}

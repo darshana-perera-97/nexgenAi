@@ -2,6 +2,17 @@
 
 <head>
   <meta charset="utf-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YMQ9R0BZT8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-YMQ9R0BZT8');
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nova AI Solutions - Enterprise AI, IoT & Solar Technology | Leading AI Company</title>
   <meta name="description"
@@ -207,23 +218,29 @@
       scrollbar-width: thin;
       scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
     }
+
     #chatMessages::-webkit-scrollbar {
       width: 6px;
     }
+
     #chatMessages::-webkit-scrollbar-track {
       background: transparent;
     }
+
     #chatMessages::-webkit-scrollbar-thumb {
       background: rgba(0, 0, 0, 0.6);
       border-radius: 3px;
       transition: all 0.3s ease;
     }
+
     #chatMessages::-webkit-scrollbar-thumb:hover {
       background: rgba(0, 0, 0, 0.8);
     }
+
     #chatMessages::-webkit-scrollbar-thumb:active {
       background: rgba(255, 255, 255, 0.9);
     }
+
     #chatMessages::-webkit-scrollbar-corner {
       background: transparent;
     }
@@ -313,11 +330,11 @@
   <!-- Hero -->
   <section class="relative z-10 bg-[#000000]">
     <div
-      class="max-w-6xl sm:px-6 lg:px-8 sm:pt-16 bg-[url(https://s.mj.run/0i_tDBV5Cqk?w=800&amp;q=80)] bg-cover mt-0 mr-auto mb-0 ml-auto pt-0 pr-0 pl-0">
+      class="max-w-6xl sm:px-6 lg:px-8 sm:pt-16 bg-[url(./Assets/mainBack.jpg)] bg-cover mt-0 mr-auto mb-0 ml-auto pt-0 pr-0 pl-0">
       <div class="flex flex-col text-center mr-auto mb-30 ml-auto space-y-6 items-center">
         <div class="mb-6">
           <span
-            class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-200 backdrop-blur">
+            class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3  py-1 text-xs font-medium text-zinc-200 backdrop-blur">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               data-lucide="sparkles" class="lucide lucide-sparkles h-3.5 w-3.5 text-violet-300">
@@ -340,7 +357,7 @@
           operations, boost efficiency, and drive real growth.
         </p>
 
-        <div class="flex gap-3 mt-8 mb-0 pb-[60px] items-center">
+        <div class="flex gap-3 mt-8 mb-10 pb-[60px] items-center">
           <a href="#"
             class="inline-flex items-center gap-2 shadow-violet-900/25 text-sm font-semibold text-white bg-gradient-to-br from-violet-500 to-indigo-600 rounded-full pt-2.5 pr-5 pb-2.5 pl-5 shadow-lg transform-gpu transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-6px_rgba(139,92,246,0.4)] hover:scale-[1.02] active:scale-[0.98] active:duration-75"
             style="transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), scale 0.3s cubic-bezier(0.4, 0, 0.2, 1);">Discover
@@ -364,9 +381,9 @@
       </div>
 
       <!-- AI Chatbot -->
-      <div class="relative sm:mt-16 mt-12">
+      <div class="relative">
         <section
-          class="relative ring-1 ring-white/10 supports-[backdrop-filter]:bg-white/5 overflow-hidden text-white bg-white/5 border-slate-50/10 border rounded-2xl">
+          class="relative ring-1 ring-white/10 supports-[backdrop-filter]:bg-[#000000b0] overflow-hidden text-white bg-white/5 border-slate-50/10 border rounded-2xl">
           <!-- Chatbot Header -->
           <div class="flex h-16 items-center justify-between border-b border-white/10 px-6">
             <div class="flex items-center gap-3">
@@ -430,6 +447,10 @@
 
           <!-- Chatbot JavaScript -->
           <script>
+            // Backend Configuration
+            const CHATBOT_API_URL = 'https://chatbot2.nexgenai.asia/api/chat';
+            // const CHATBOT_API_URL = 'http://localhost:5001/api/chat';
+
             document.addEventListener('DOMContentLoaded', function () {
               const chatForm = document.getElementById('chatForm');
               const chatInput = document.getElementById('chatInput');
@@ -441,13 +462,13 @@
 
                 if (isUser) {
                   messageDiv.innerHTML = `
-                    <div class="h-8 w-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center flex-shrink-0">
+                    <div class="h-8 w-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                         <circle cx="12" cy="7" r="4"></circle>
                       </svg>
                     </div>
-                    <div class="bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl rounded-tr-sm px-4 py-3 max-w-xs">
+                    <div class="bg-gradient-to-r from-violet-500 to-indigo-600 rounded-2xl rounded-tr-sm px-4 py-3 max-w-xs">
                       <p class="text-sm text-white">${content}</p>
                     </div>
                   `;
@@ -515,7 +536,7 @@
 
                 try {
                   // Send message to backend
-                  const response = await fetch('http://localhost:5001/api/chat', {
+                  const response = await fetch(CHATBOT_API_URL, {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',

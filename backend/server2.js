@@ -7,19 +7,15 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5001;
 
+// Trust proxy - Required when behind reverse proxy (Nginx, load balancer, etc.)
+app.set('trust proxy', true);
+
 // Security middleware
 app.use(helmet());
 
-// CORS configuration
+// CORS configuration - Allow all origins
 app.use(cors({
-  origin: [
-    process.env.CORS_ORIGIN || 'http://localhost:3000',
-    'http://localhost:8080',
-    'http://127.0.0.1:8080',
-    'file://',
-    'http://localhost:5500',
-    'http://127.0.0.1:5500'
-  ],
+  origin: true, // Allow all origins
   credentials: true
 }));
 
@@ -51,8 +47,18 @@ app.get('/health', (req, res) => {
 app.post('/api/chat', async (req, res) => {
   try {
     const { message } = req.body;
+    const timestamp = new Date().toISOString();
+    const clientIP = req.ip || req.connection.remoteAddress;
+
+    // Log incoming message
+    console.log('\n' + '='.repeat(80));
+    console.log(`📨 INCOMING MESSAGE [${timestamp}]`);
+    console.log(`🌐 Client IP: ${clientIP}`);
+    console.log(`💬 User Message: "${message}"`);
+    console.log('='.repeat(80));
 
     if (!message || typeof message !== 'string') {
+      console.log('❌ ERROR: Invalid message format');
       return res.status(400).json({ 
         error: 'Message is required and must be a string' 
       });
@@ -63,17 +69,23 @@ app.post('/api/chat', async (req, res) => {
     try {
       OpenAI = require('openai');
     } catch (error) {
-      console.error('OpenAI package not installed:', error.message);
+      console.error('❌ OpenAI package not installed:', error.message);
+      const fallbackResponse = "I'm currently unavailable. Please contact our support team directly for assistance with AI, IoT, or Solar solutions.";
+      console.log(`🤖 Bot Response: "${fallbackResponse}"`);
+      console.log('='.repeat(80) + '\n');
       return res.json({
-        response: "I'm currently unavailable. Please contact our support team directly for assistance with AI, IoT, or Solar solutions."
+        response: fallbackResponse
       });
     }
 
     // Check if API key is configured
     if (!process.env.OPENAI_API_KEY) {
-      console.warn('OpenAI API key not configured');
+      console.warn('⚠️  OpenAI API key not configured');
+      const maintenanceResponse = "I'm currently in maintenance mode. Please contact our support team directly for assistance with AI, IoT, or Solar solutions.";
+      console.log(`🤖 Bot Response: "${maintenanceResponse}"`);
+      console.log('='.repeat(80) + '\n');
       return res.json({
-        response: "I'm currently in maintenance mode. Please contact our support team directly for assistance with AI, IoT, or Solar solutions."
+        response: maintenanceResponse
       });
     }
 
@@ -100,6 +112,8 @@ Key information about Nova AI Solutions:
 
 Always be helpful and direct users to our contact page (contact-us.html) for detailed consultations or project discussions.`;
 
+    console.log('🔄 Processing message with OpenAI...');
+    
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
@@ -111,6 +125,11 @@ Always be helpful and direct users to our contact page (contact-us.html) for det
     });
 
     const response = completion.choices[0].message.content;
+    
+    // Log outgoing response
+    console.log(`🤖 Bot Response: "${response}"`);
+    console.log(`📊 Tokens used: ${completion.usage?.total_tokens || 'N/A'}`);
+    console.log('='.repeat(80) + '\n');
 
     res.json({ response });
 

@@ -474,7 +474,7 @@
     </header>
 
     <!-- Hero -->
-    <section class="relative z-10 bg-[#000000]">
+    <section class="relative z-10 bg-transparent">
       <div
         class="max-w-6xl sm:px-6 lg:px-8 sm:pt-16 bg-[url(./Assets/mainBack.jpg)] bg-cover mt-0 mr-auto mb-0 ml-auto pt-0 pr-0 pl-0"
       >
@@ -817,7 +817,7 @@
     </section>
 
     <!-- Features -->
-    <section class="relative z-10 bg-gradient-to-b from-[#000000] to-[#0A0A11]">
+    <section class="relative z-10 bg-gradient-to-b from-transparent to-[#0A0A11]">
       <div
         class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pt-20 pr-4 pb-20 pl-4"
       >
@@ -1120,7 +1120,7 @@
     </section>
 
     <!-- Our Enterprise AI Solutions & IoT -->
-    <section class="relative z-10 bg-gradient-to-b from-[#000000] to-[#0A0A11]">
+    <section class="relative z-10 bg-gradient-to-b from-transparent to-[#0A0A11]">
       <div
         class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pt-20 pr-4 pb-20 pl-4"
       >
@@ -1407,7 +1407,7 @@
 
         <!-- Our Clients Section -->
         <section
-          class="relative z-10 mt-20 mb-20 bg-gradient-to-b from-[#0a0a12] to-[#000000] py-20"
+          class="relative z-10 mt-20 mb-20 bg-gradient-to-b from-[#0a0a12] to-transparent py-20"
         >
           <div
             class="max-w-6xl sm:px-6 lg:px-8 mr-auto ml-auto pt-4 pr-4 pb-8 pl-4"
@@ -1425,65 +1425,67 @@
             <div
               class="mt-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center"
             >
-              <!-- Client Logo 1 -->
+              <!-- Microsoft Logo -->
               <div
                 class="flex items-center justify-center h-16 w-32 p-4 hover:bg-white/10 transition-colors duration-300"
               >
-                <img
-                  src="https://via.placeholder.com/120x60/1f2937/ffffff?text=Client+1"
-                  alt="Client 1"
-                  class="max-h-12 max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
+                <svg viewBox="0 0 24 24" class="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <path fill="currentColor" d="M11.4 24H0V12.6h11.4V24zM24 24H12.6V12.6H24V24zM11.4 11.4H0V0h11.4v11.4zM24 11.4H12.6V0H24v11.4z"/>
+                </svg>
               </div>
-              <!-- Client Logo 2 -->
+              
+              <!-- Google Logo -->
               <div
                 class="flex items-center justify-center h-16 w-32 p-4 hover:bg-white/10 transition-colors duration-300"
               >
-                <img
-                  src="https://via.placeholder.com/120x60/1f2937/ffffff?text=Client+2"
-                  alt="Client 2"
-                  class="max-h-12 max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
+                <svg viewBox="0 0 24 24" class="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
               </div>
-              <!-- Client Logo 3 -->
+              
+              <!-- Amazon Logo -->
               <div
                 class="flex items-center justify-center h-16 w-32 p-4 hover:bg-white/10 transition-colors duration-300"
               >
-                <img
-                  src="https://via.placeholder.com/120x60/1f2937/ffffff?text=Client+3"
-                  alt="Client 3"
-                  class="max-h-12 max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
+                <svg viewBox="0 0 24 24" class="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <path fill="currentColor" d="M6.763 12.456c-.186-1.24-.186-2.44 0-3.68.093-.62.28-1.24.56-1.8.28-.56.65-1.06 1.1-1.5.45-.44.98-.8 1.57-1.06.59-.26 1.22-.39 1.87-.39.65 0 1.28.13 1.87.39.59.26 1.12.62 1.57 1.06.45.44.82.94 1.1 1.5.28.56.47 1.18.56 1.8.186 1.2.186 2.44 0 3.68-.093.62-.28 1.24-.56 1.8-.28.56-.65 1.06-1.1 1.5-.45.44-.98.8-1.57 1.06-.59.26-1.22.39-1.87.39-.65 0-1.28-.13-1.87-.39-.59-.26-1.12-.62-1.57-1.06-.45-.44-.82-.94-1.1-1.5-.28-.56-.47-1.18-.56-1.8zm2.5-1.24c-.093-.62-.093-1.24 0-1.86.093-.62.28-1.18.56-1.68.28-.5.65-.94 1.1-1.32.45-.38.98-.68 1.57-.9.59-.22 1.22-.33 1.87-.33.65 0 1.28.11 1.87.33.59.22 1.12.52 1.57.9.45.38.82.82 1.1 1.32.28.5.47 1.06.56 1.68.093.62.093 1.24 0 1.86-.093.62-.28 1.18-.56 1.68-.28.5-.65.94-1.1 1.32-.45.38-.98.68-1.57.9-.59.22-1.22.33-1.87.33-.65 0-1.28-.11-1.87-.33-.59-.22-1.12-.52-1.57-.9-.45-.38-.82-.82-1.1-1.32-.28-.5-.47-1.06-.56-1.68z"/>
+                  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
               </div>
-              <!-- Client Logo 4 -->
+              
+              <!-- IBM Logo -->
               <div
                 class="flex items-center justify-center h-16 w-32 p-4 hover:bg-white/10 transition-colors duration-300"
               >
-                <img
-                  src="https://via.placeholder.com/120x60/1f2937/ffffff?text=Client+4"
-                  alt="Client 4"
-                  class="max-h-12 max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
+                <svg viewBox="0 0 24 24" class="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <path fill="currentColor" d="M8.5 2h7v20h-7V2zm1 1v18h5V3h-5z"/>
+                  <path fill="currentColor" d="M2 6h20v2H2V6zm0 4h20v2H2v-2zm0 4h20v2H2v-2zm0 4h20v2H2v-2z"/>
+                </svg>
               </div>
-              <!-- Client Logo 5 -->
+              
+              <!-- Oracle Logo -->
               <div
                 class="flex items-center justify-center h-16 w-32 p-4 hover:bg-white/10 transition-colors duration-300"
               >
-                <img
-                  src="https://via.placeholder.com/120x60/1f2937/ffffff?text=Client+5"
-                  alt="Client 5"
-                  class="max-h-12 max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
+                <svg viewBox="0 0 24 24" class="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                  <path fill="currentColor" d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                  <path fill="currentColor" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                </svg>
               </div>
-              <!-- Client Logo 6 -->
+              
+              <!-- Salesforce Logo -->
               <div
                 class="flex items-center justify-center h-16 w-32 p-4 hover:bg-white/10 transition-colors duration-300"
               >
-                <img
-                  src="https://via.placeholder.com/120x60/1f2937/ffffff?text=Client+6"
-                  alt="Client 6"
-                  class="max-h-12 max-w-full object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
+                <svg viewBox="0 0 24 24" class="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <path fill="#00A1E0" d="M8.5 2h7v20h-7V2zm1 1v18h5V3h-5z"/>
+                  <path fill="#00A1E0" d="M2 6h20v2H2V6zm0 4h20v2H2v-2zm0 4h20v2H2v-2zm0 4h20v2H2v-2z"/>
+                  <circle fill="#00A1E0" cx="12" cy="12" r="3"/>
+                </svg>
               </div>
             </div>
           </div>
@@ -1720,7 +1722,7 @@
     </section>
 
     <section
-      class="relative z-10 bg-gradient-to-b from-[#000000] to-[#0a0a12] py-20 w-full"
+      class="relative z-10 bg-gradient-to-b from-transparent to-[#0a0a12] py-20 w-full"
     >
       <div class="w-full px-6 text-center">
         <h2

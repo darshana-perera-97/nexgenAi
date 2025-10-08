@@ -1,7 +1,7 @@
 {
   "name": "nova-ai-chatbot-backend",
   "version": "1.0.0",
-  "description": "Backend API for Nova AI Solutions chatbot",
+  "description": "Backend API for Nexgen Ai Solutions chatbot",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -25,6 +25,6 @@
     "nodejs",
     "express"
   ],
-  "author": "Nova AI Solutions",
+  "author": "Nexgen Ai Solutions",
   "license": "MIT"
 }

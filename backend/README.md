@@ -1,6 +1,6 @@
-# Nova AI Chatbot Backend
+# Nexgen Ai Chatbot Backend
 
-A Node.js backend API for the Nova AI Solutions chatbot, powered by OpenAI's GPT models.
+A Node.js backend API for the Nexgen Ai Solutions chatbot, powered by OpenAI's GPT models.
 
 ## Features
 

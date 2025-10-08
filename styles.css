@@ -1,4 +1,4 @@
-/* Custom Styles for Nova AI Landing Page */
+/* Custom Styles for Nexgen Ai Landing Page */
 
 /* Font Family Styles */
 .font-geist { 
@@ -225,4 +225,12 @@ body {
 /* Additional scrollbar utility class */
 .scrollbar-custom {
   scrollbar-gutter: stable;
+}
+
+/* Hero Section Background */
+.hero-section {
+  background-color: #000000 !important;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }

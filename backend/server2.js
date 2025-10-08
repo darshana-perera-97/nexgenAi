@@ -39,7 +39,7 @@ app.get('/health', (req, res) => {
   res.json({ 
     status: 'OK', 
     timestamp: new Date().toISOString(),
-    service: 'Nova AI Chatbot API'
+    service: 'Nexgen Ai Chatbot API'
   });
 });
 
@@ -93,8 +93,8 @@ app.post('/api/chat', async (req, res) => {
       apiKey: process.env.OPENAI_API_KEY,
     });
 
-    // System prompt for Nova AI Solutions
-    const systemPrompt = `You are Nova AI Assistant, a helpful AI assistant for Nova AI Solutions, a company specializing in enterprise AI solutions, IoT integration, and solar technology. 
+    // System prompt for Nexgen Ai Solutions
+    const systemPrompt = `You are Nexgen Ai Assistant, a helpful AI assistant for Nexgen Ai Solutions, a company specializing in enterprise AI solutions, IoT integration, and solar technology. 
 
 Your role is to:
 1. Help users understand our AI, IoT, and Solar solutions
@@ -103,7 +103,7 @@ Your role is to:
 4. Guide users to contact our team for detailed consultations
 5. Be professional, knowledgeable, and helpful
 
-Key information about Nova AI Solutions:
+Key information about Nexgen Ai Solutions:
 - We provide custom AI solutions for enterprise businesses
 - We offer IoT integration services and smart device management
 - We develop solar technology and sustainable energy solutions
@@ -173,7 +173,7 @@ app.use((error, req, res, next) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Nova AI Chatbot API running on port ${PORT}`);
+  console.log(`🚀 Nexgen Ai Chatbot API running on port ${PORT}`);
   console.log(`📊 Health check: http://localhost:${PORT}/health`);
   console.log(`💬 Chat endpoint: http://localhost:${PORT}/api/chat`);
   

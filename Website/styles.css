@@ -1,4 +1,4 @@
-/* Custom Styles for Nexgen Ai Landing Page */
+/* Custom Styles for NexGen-Ai Landing Page */
 
 /* Font Family Styles */
 .font-geist { 
@@ -233,4 +233,59 @@ body {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
+}
+
+/* Client Logos Scrolling Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Prevent horizontal scroll on the page */
+body {
+  overflow-x: hidden;
+}
+
+/* Ensure client logos container doesn't cause horizontal scroll */
+.client-logos-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Contact Form Dropdown Styling */
+select {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+}
+
+select option {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  padding: 8px 12px;
+}
+
+select option:hover {
+  background-color: #2a2a2a !important;
+}
+
+select option:checked {
+  background-color: #8b5cf6 !important;
+  color: #ffffff !important;
+}
+
+/* Focus state for select */
+select:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
 }
